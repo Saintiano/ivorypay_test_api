@@ -65,6 +65,25 @@ AWS
 - PM2 - Used to run the app permenantly
 - clone your app from github and run using PM2 or Docker
 
+**************************************************
+DOCKERIZE NEST JS APP
+****************************************************
+
+## Creating your first Docker container ##
+
+docker build -t ivorypay_frontend:developement .
+
+## List Images in your system ##
+
+docker image ls OR docker images
+
+## Running docker container ##
+
+docker run --publish 3000:3000 ivorypay_frontend:developement
+
+
+
+
 
 
 
@@ -72,6 +91,4 @@ AWS
 MVC with Repository design
 ****************************************************
 
-Controller : The controller
-
-
+Controller : The controller 
