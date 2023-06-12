@@ -62,12 +62,16 @@ AWS
 - Use the created Elastic IP to map the default assigned IP address of the AWS EC2 instance
 - Use this IP Address to map a custom domain name to your AWS EC2 Instance
 - Node v18.10.0
-- PM2 - Used to run the app permenantly
+- PM2 - Used to run the app permanently
 - clone your app from github and run using PM2 or Docker
 
+- Running with docker is below
+
 **************************************************
-DOCKERIZE NEST JS APP
+DOCKERIZE NEST JS and NEXT APP
 ****************************************************
+
+Install Docker on AWS EC2 Instance and then 
 
 ## Creating your first Docker container ##
 
@@ -82,13 +86,31 @@ docker image ls OR docker images
 docker run --publish 3000:3000 ivorypay_frontend:developement
 
 
+**************************************************
+THIRD PARTY PAYMENT API
+****************************************************
 
+Using stripe payment API
 
+install the stripe package and configure the stripe api key in the .env file,
 
+Create a user auth controller, module
 
 
 **************************************************
 MVC with Repository design
 ****************************************************
 
-Controller : The controller 
+Controller : The controller is where the response from the services are returned, its where the api routes are 
+also created based on the service
+
+Model : The model is where the data is accessed and stored.
+
+View : The view is the graphical user interface. It is where the user will input the data and display the data.
+
+Services: The services is where the logics are implemented with the typeorm and the result return to the controller.
+
+Module: The module is where the the typeorm entity class of that controller is added to the provider,
+This then synchronize or creates table in the connected Database.
+
+Middleware: The middleware is where the helper files are stored, these are used to implement simple functions.
