@@ -8,7 +8,7 @@ import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put } from '@
 import { TransactionService } from '../services/transaction.service';
 import { Transaction } from '../model/transaction.class';
 
-@Controller('transaction')
+@Controller('api/transaction')
 export class TransactionController { 
 
     //instantiate TransactionService in a constructor
