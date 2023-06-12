@@ -1,0 +1,116 @@
+**************************************************
+NODE VERSION ON MY MACHINE
+****************************************************
+
+18.10.0 - used for nestjs/cli
+
+
+**************************************************
+START NEST JS APP
+****************************************************
+
+$ npm i -g @nestjs/cli
+
+$ npm install (Make sure the .env has been configured and DB with name = local_ivorypay created on a POSTGRES )
+
+$ npm run start:dev
+
+$ npm run start
+
+
+**************************************************
+CREATE A .ENV FILE and Store this variables
+****************************************************
+
+Initial database name - aws_clovis
+
+Master username - postgres
+
+Master password - Chisom007# || Chisom007
+
+DB instance identifier - clovis-aws-test
+
+host - clovis-aws-test.coa7pmc1rfbe.us-east-2.rds.amazonaws.com
+
+port - 5432
+
+
+.ENV DETAILS
+*********************
+
+NODE_ENV = "dev"
+# NODE_ENV = "prod"
+
+POSTGRES_HOST=127.0.0.1
+POSTGRES_PORT=5432
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=Chisom
+POSTGRES_DATABASE=local_ivorypay
+
+# PROD_POSTGRES_HOST=clovis-aws-test.coa7pmc1rfbe.us-east-2.rds.amazonaws.com
+# PROD_POSTGRES_PORT=5432
+# PROD_POSTGRES_USER=postgres
+# PROD_POSTGRES_PASSWORD=Chisom007
+# PROD_POSTGRES_DATABASE=aws_clovis
+
+**************************************************
+AWS
+****************************************************
+- Create an RDS Postgres DB and a database aws_clovis, make connection be accessible
+- Create an AWS EC2 Instance
+- Create an Elastic IP
+- Use the created Elastic IP to map the default assigned IP address of the AWS EC2 instance
+- Use this IP Address to map a custom domain name to your AWS EC2 Instance
+- Node v18.10.0
+- PM2 - Used to run the app permanently
+- clone your app from github and run using PM2 or Docker
+
+- Running with docker is below
+
+**************************************************
+DOCKERIZE NEST JS and NEXT APP
+****************************************************
+
+Install Docker on AWS EC2 Instance and then 
+
+## Creating your first Docker container ##
+
+docker build -t ivorypay_frontend:developement .
+
+## List Images in your system ##
+
+docker image ls OR docker images
+
+## Running docker container ##
+
+docker run --publish 3000:3000 ivorypay_frontend:developement
+
+
+**************************************************
+THIRD PARTY PAYMENT API
+****************************************************
+
+Using stripe payment API
+
+install the stripe package and configure the stripe api key in the .env file,
+
+Create a user auth controller, module
+
+
+**************************************************
+MVC with Repository design
+****************************************************
+
+Controller : The controller is where the response from the services are returned, its where the api routes are 
+also created based on the service
+
+Model : The model is where the data is accessed and stored.
+
+View : The view is the graphical user interface. It is where the user will input the data and display the data.
+
+Services: The services is where the logics are implemented with the typeorm and the result return to the controller.
+
+Module: The module is where the the typeorm entity class of that controller is added to the provider,
+This then synchronize or creates table in the connected Database.
+
+Middleware: The middleware is where the helper files are stored, these are used to implement simple functions.

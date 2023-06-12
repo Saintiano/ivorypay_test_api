@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "47661b79-8dfb-4434-aa76-1e796eb6a3cd",
+		"name": "Ivorypay nest JS api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7460701"
+	},
+	"item": [
+		{
+			"name": "Welcome to ivorypay api",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3000/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all transactions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Saintiano\",\r\n    \"lastName\": \"Clovis\",\r\n    \"email\": \"clovis@gmail.com\",\r\n    \"itemName\": \"Ivorypay Gold Investment\",\r\n    \"transactionDescription\": \"Paying for ivorypay product\",\r\n    \"price\": \"445.89\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/transaction/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"transaction",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get transaction details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactionID\": 3\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/transaction/transactionDetails",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"transaction",
+						"transactionDetails"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
