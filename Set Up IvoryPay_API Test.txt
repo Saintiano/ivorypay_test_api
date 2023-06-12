@@ -1,0 +1,77 @@
+**************************************************
+NODE VERSION ON MY MACHINE
+****************************************************
+
+18.10.0 - used for nestjs/cli
+
+
+**************************************************
+START NEST JS APP
+****************************************************
+
+$ npm i -g @nestjs/cli
+
+$ npm install (Make sure the .env has been configured and DB with name = local_ivorypay created on a POSTGRES )
+
+$ npm run start:dev
+
+$ npm run start
+
+
+**************************************************
+CREATE A .ENV FILE and Store this variables
+****************************************************
+
+Initial database name - aws_clovis
+
+Master username - postgres
+
+Master password - Chisom007# || Chisom007
+
+DB instance identifier - clovis-aws-test
+
+host - clovis-aws-test.coa7pmc1rfbe.us-east-2.rds.amazonaws.com
+
+port - 5432
+
+
+.ENV DETAILS
+*********************
+
+NODE_ENV = "dev"
+# NODE_ENV = "prod"
+
+POSTGRES_HOST=127.0.0.1
+POSTGRES_PORT=5432
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=Chisom
+POSTGRES_DATABASE=local_ivorypay
+
+# PROD_POSTGRES_HOST=clovis-aws-test.coa7pmc1rfbe.us-east-2.rds.amazonaws.com
+# PROD_POSTGRES_PORT=5432
+# PROD_POSTGRES_USER=postgres
+# PROD_POSTGRES_PASSWORD=Chisom007
+# PROD_POSTGRES_DATABASE=aws_clovis
+
+**************************************************
+AWS
+****************************************************
+- Create an RDS Postgres DB and a database aws_clovis, make connection be accessible
+- Create an AWS EC2 Instance
+- Create an Elastic IP
+- Use the created Elastic IP to map the default assigned IP address of the AWS EC2 instance
+- Use this IP Address to map a custom domain name to your AWS EC2 Instance
+- Node v18.10.0
+- PM2 - Used to run the app permenantly
+- clone your app from github and run using PM2 or Docker
+
+
+
+
+**************************************************
+MVC with Repository design
+****************************************************
+
+Controller : The controller
+
+
